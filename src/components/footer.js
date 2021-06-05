@@ -6,9 +6,12 @@ import ContentWrapper from "../styles/contentWrapper"
 import Context from "../context"
 import Logo from "./logo"
 import { lightTheme, darkTheme } from "../styles/theme"
-import { footerLinks } from "../../config"
+// import { footerLinks } from "../../config"
 
 const StyledFooter = styled.footer`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: ${({ theme }) => theme.footerHeight};
   background: ${({ theme, darkMode }) =>
@@ -23,8 +26,9 @@ const StyledContentWrapper = styled(ContentWrapper)`
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+
     .footer-links {
       /* Adjust width of links wrapper accordingly */
       width: 10rem;
@@ -51,21 +55,21 @@ const Footer = () => {
   return (
     <StyledFooter darkMode={darkMode}>
       <StyledContentWrapper>
-        <Link to="/" aria-label="home">
-          <Logo
-            size="1.5rem"
-            color={
-              darkMode ? darkTheme.colors.primary : lightTheme.colors.background
-            }
-          />
-        </Link>
-        <div className="footer-links" data-testid="footer-links">
-          {footerLinks.map(({ name, url }, key) => (
-            <StyledLink key={key} to={url} $darkMode={darkMode}>
-              {name}
-            </StyledLink>
-          ))}
-        </div>
+        <Logo
+          size="1.5rem"
+          color={
+            darkMode ? darkTheme.colors.primary : lightTheme.colors.background
+          }
+          altText={"Made with ❤ & Gatsby"}
+        />
+        {/*<div className="footer-links" data-testid="footer-links">*/}
+        {/*  {footerLinks.length !== 0 &&*/}
+        {/*    footerLinks.map(({ name, url }, key) => (*/}
+        {/*      <StyledLink key={key} to={url} $darkMode={darkMode}>*/}
+        {/*        {name}*/}
+        {/*      </StyledLink>*/}
+        {/*    ))}*/}
+        {/*</div>*/}
       </StyledContentWrapper>
     </StyledFooter>
   )
