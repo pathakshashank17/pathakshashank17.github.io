@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://pathakshashank17.github.io/sitemap.xml
+Host: https://pathakshashank17.github.io
