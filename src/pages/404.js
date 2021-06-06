@@ -20,6 +20,7 @@ const StyledSection = styled.section`
 
 const StyledContentWrapper = styled(ContentWrapper)`
   && {
+    font-size: 2rem;
     width: 100%;
     max-width: 36rem;
     margin: 0;
@@ -43,8 +44,8 @@ const NotFoundPage = () => {
         />
         <StyledSection>
           <StyledContentWrapper>
-            <h1 data-testid="heading">NOT FOUND</h1>
-            <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+            <h1 data-testid="heading">404</h1>
+            <p>Please check the URL.</p>
           </StyledContentWrapper>
         </StyledSection>
       </Layout>
