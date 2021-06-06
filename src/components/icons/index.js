@@ -5,7 +5,6 @@ import IconLinkedIn from "./linkedin"
 import IconGitHub from "./github"
 import IconMail from "./mail"
 import IconTwitter from "./twitter"
-import IconGatsby from "./gatsby"
 
 // Utility function to grab Icons by name
 const Icon = ({ name, color }) => {
@@ -18,8 +17,6 @@ const Icon = ({ name, color }) => {
       return <IconMail color={color} />
     case "twitter":
       return <IconTwitter color={color} />
-    case "gatsby":
-      return <IconGatsby color={color} />
     default:
       return null
   }
